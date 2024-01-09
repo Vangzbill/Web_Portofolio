@@ -33,7 +33,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5 }}
             className="col-span-8 place-self-center text-center sm:text-left justify-self-start ml-9 mt-0" 
           >
-            <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+            <h1 className="text-white mb-4 text-3xl sm:text-4xl lg:text-7xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
@@ -41,7 +41,7 @@ const HeroSection = () => {
             <TypeAnimation
               sequence={[
                 "Sabilla Luthfi R",
-                1000,
+                1000, 
                 "Web Developer",
                 1000,
                 "Backend Engineer",
