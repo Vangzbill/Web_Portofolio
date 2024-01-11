@@ -13,9 +13,15 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="col-span-4 place-self-center mr-9 mt-0 lg:mt-0 mb-4" 
+            className="col-span-4 place-self-center mt-0 lg:mt-0"
+            style={{ 
+              width: "fit-content",
+              marginLeft: "auto",
+              marginRight: "auto",
+              marginBottom: "15px",
+            }} 
           >
-            <div className="rounded-full bg-[#222222] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+            <div className="rounded-full bg-[#222222] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative mx-auto">
               <Image
                 src="/images/foto.png"
                 alt="foto diri"
@@ -31,7 +37,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="col-span-8 place-self-center text-center sm:text-left justify-self-start ml-9 mt-0" 
+            className="col-span-8 place-self-center text-center lg:ml-9 sm:text-left justify-self-start mt-0" 
           >
             <h1 className="text-white mb-4 text-3xl sm:text-4xl lg:text-7xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
