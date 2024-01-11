@@ -55,7 +55,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          I'm an Informatic Engineering student specializing in web development, proficient in HTML, CSS, and JavaScript. I've Built responsive websites and explored frameworks like Express and Laravel, eager to contribute to innovative projects. My combination of education and passion makes me a valuable asset in the dynamic tech industry.
+          I am a student who is eager to learn about new things, especially those currently prevalent in the field of technology.
           </p>
           <div>
             <Link href="/doc/Sabilla_Luthfi_Rahmadhan-CV.pdf" passHref>
