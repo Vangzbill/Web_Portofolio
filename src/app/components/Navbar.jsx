@@ -31,7 +31,7 @@ const Navbar = () => {
         <Link
           href={"/"}
           style={{
-            backgroundImage: "linear-gradient(to right, blue, green)",
+            backgroundImage: "linear-gradient(to right, skyblue, green)",
             WebkitBackgroundClip: "text",
             color: "transparent",
             fontFamily: "Geneva",
