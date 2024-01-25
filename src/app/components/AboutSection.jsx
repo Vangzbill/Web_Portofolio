@@ -105,7 +105,7 @@ const AboutSection = () => {
             }}>
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I&apos;m an Informatic Engineering student specializing in web development, proficient in HTML, CSS, and JavaScript. I've Built responsive websites and explored frameworks like Express and Laravel, eager to contribute to innovative projects. My combination of pendidikan and passion makes me a valuable asset in the dynamic tech industry.
+            I&apos;m an Informatic Engineering student specializing in web development, proficient in HTML, CSS, and JavaScript. I&apos;ve Built responsive websites and explored frameworks like Express and Laravel, eager to contribute to innovative projects. My combination of study and passion makes me a valuable asset in the dynamic tech industry.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
