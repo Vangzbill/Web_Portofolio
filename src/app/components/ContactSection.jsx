@@ -20,7 +20,7 @@ const ContactSection = () => {
         };
         const JSONdata = JSON.stringify(data);
         const endpoint = "/api/send";
-
+    
         const option = {
             method: "POST",
             headers: {
@@ -28,21 +28,25 @@ const ContactSection = () => {
             },
             body: JSONdata,
         };
-
-        const request = await fetch(endpoint, option);
-        const response = await fetch(request);
-
-        if (response.status === 200) {
-            console.log("Email sent");
-            emailSubmittedSet(true);
+    
+        try {
+            const request = await fetch(endpoint, option);
+            const response = await request.json();
+    
+            if (response.error) {
+                console.error("Error:", response.error);
+            } else {
+                console.log("Email sent");
+                emailSubmittedSet(true);
+            }
+        } catch (error) {
+            console.error("Error:", error);
         }
-    }
+    }    
     
     return (
-        <section
-        id="contact"
-        className="grid md:grid-cols-2 my-20 md:my-12 py-24 gap-4 relative"
-        >
+        <section id="contact" className="grid md:grid-cols-2 my-20 md:my-12 py-24 gap-4 relative">
+{/* 
         <div>
             {emailSubmitted ? (
             <p className="text-green-500 text-sm mt-2">
@@ -105,33 +109,37 @@ const ContactSection = () => {
             </form>
             )}
         </div>
+         */}
         <div className="bg-radial-gradient(ellipse_at_center,_var(--tw-gradient-stops)) from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
-        <div className="z-10 mt-12 pt-4 lg:ml-8 lg:pl-8">
-            <h2 className="text-4xl font-bold text-white my-2">
-                Let&apos;s Connect
-            </h2>
-            <p className="text-[#ADB7BE] mb-4 max-w-md">
-            {" "}
-            I&apos;m currently looking for new opportunities, my inbox is always
-            open. Whether you have a question or just want to say hi, I&apos;ll
-            try my best to get back to you!
-            </p>
-            <div className="socials flex flex-row gap-2">
-            <Link href="https://github.com/Vangzbill" target="_blank">
-                <Image src={GithubIcon} alt="Github Icon" />
-            </Link>
-            <Link href="https://www.linkedin.com/in/sabilla-luthfi-rahmadhan/" target="_blank">
-                <Image src={LinkedinIcon} alt="Linkedin Icon" />
-            </Link>
-            <Link href="https://twitter.com/luthfi_sabilla" target="_blank">
-                <Image src={TwitterIcon} alt="Twitter Icon" />
-            </Link>
-            <Link href="https://www.instagram.com/thisis_sabill/" target="_blank">
-                <Image src={InstagramIcon} alt="Instagram Icon" />
-            </Link>
+
+        <div className="z-10 mt-12 pt-4 lg:ml-8 lg:pl-8 flex flex-col">
+            <div className="mb-4">
+                <h2 className="text-4xl font-bold text-white my-2">
+                    Let&apos;s Connect
+                </h2>
+                <p className="text-[#ADB7BE] max-w-md">
+                    I&apos;m currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
+                </p>
             </div>
         </div>
-        </section>
+
+        <div className="z-10 mt-20 pt-4 lg:mx-8 lg:pr-0 flex flex-col items-center">
+            <div className="socials flex flex-row gap-8">
+                <Link href="https://github.com/Vangzbill" target="_blank">
+                    <Image src={GithubIcon} alt="Github Icon" />
+                </Link>
+                <Link href="https://www.linkedin.com/in/sabilla-luthfi-rahmadhan/" target="_blank">
+                    <Image src={LinkedinIcon} alt="Linkedin Icon" />
+                </Link>
+                <Link href="https://twitter.com/luthfi_sabilla" target="_blank">
+                    <Image src={TwitterIcon} alt="Twitter Icon" />
+                </Link>
+                <Link href="https://www.instagram.com/thisis_sabill/" target="_blank">
+                    <Image src={InstagramIcon} alt="Instagram Icon" />
+                </Link>
+            </div>
+        </div>
+    </section>
     );
 
 }
