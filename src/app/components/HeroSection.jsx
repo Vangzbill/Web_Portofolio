@@ -8,19 +8,19 @@ import Link from "next/link";
 const HeroSection = () => {
     return (
       <section className="lg:py-20 lg:my-8">
-          <div className="grid grid-cols-1 sm:grid-cols-12">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="col-span-12 sm:col-span-4 place-self-center mt-0 lg:mt-0"
-              style={{
-                width: "fit-content",
-                marginLeft: "auto",
-                marginRight: "auto",
-                marginBottom: "15px",
-              }}
-            >
+        <div className="grid grid-cols-1 sm:grid-cols-12">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="col-span-4 place-self-center mt-0 lg:mt-0"
+            style={{ 
+              width: "fit-content",
+              marginLeft: "auto",
+              marginRight: "auto",
+              marginBottom: "15px",
+            }} 
+          >
             <div className="rounded-full bg-[#222222] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative mx-auto">
               <Image
                 src="/images/foto.png"
@@ -34,11 +34,11 @@ const HeroSection = () => {
           </motion.div>
   
           <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="col-span-12 sm:col-span-8 place-self-center text-center sm:text-left justify-self-start mt-0"
-            >
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="col-span-8 place-self-center text-center lg:ml-9 sm:text-left justify-self-start mt-0" 
+          >
             <h1 className="text-white mb-4 text-3xl sm:text-4xl lg:text-7xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
